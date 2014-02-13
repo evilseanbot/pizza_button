@@ -32,4 +32,4 @@ What I would do if I worked on it further:
 
 12. Have the site check whether any nearby pizza places are still open according to posted schedule / holiday calendar, and if not, inform the user that they can't order a pizza.
 
-13. Allow users to actually pick pizzas to order optionally. I wouldn't pick a big focus on that, as it could be thereotically difficult to include all ordering options include a national range of pizza stores, but I would probably add non-half-vegan options, at the least.
+13. Allow users to actually pick pizzas to order optionally. I wouldn't pick a big focus on that, as it could be thereotically difficult to include all ordering options include a national range of pizza stores, but I would probably add non-half-vegan options, at the least. A simple "next place" option on the pizza button would be good if a user knows that they don't like a provided pizza place.
