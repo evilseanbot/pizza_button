@@ -1,0 +1,92 @@
+body {
+	margin: 0px;
+}
+
+
+#header {
+	background-color: black;
+	height: 212px;
+	text-align: center;
+}
+
+#header img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	padding: 20px;
+	height: 450px;
+}
+
+#pizzaForm {
+	font-size: 20px;
+	text-align: center;
+}
+
+.formQ {
+	margin-bottom: 20px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pizzaButton {
+	border: 10px solid #444488;
+	background-color: #444488;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 20px;
+	width: 400px;
+	height: 400px;
+	margin-left: 40px;
+	margin-top: 10px;
+	float: left;
+	cursor: pointer;
+}
+
+#pizzaButton h1 {
+	font-size: 30px;
+}
+
+#pizzaImg {
+	width: 280px;
+	height: 260px;
+}
+
+#pizzaButton.ordered {
+	border: 10px solid #884;
+	background-color: #884;
+	cursor: default;
+}
+
+#infoColumn {
+	float: right;
+}
+
+.infoBox {
+	background-color: #448844;
+	color: white;
+	width: 300px;
+	height: 60px;
+	font-size: 20px;
+	border: 20px solid #484;
+	border-radius: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#errorMsg {
+	color: red;
+}
+
+.error {
+	border: 1px solid red;
+	background-color: #f88;
+}

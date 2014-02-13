@@ -1,0 +1,71 @@
+<html ng-app>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-sanitize.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pizza.css">
+    <title>Pizza Ordering Application</title>
+<body ng-controller='pizzaCtrl'>
+    <div id='header'>
+        <img src='img/pizzaBanner.jpg'>
+    </div>
+    <div id='container'>
+        <!--- This section displays the form that must be filled out prior to ordering pizza. -->
+	    <div ng-show='!formFilledOut' ng-init='formFilledOut = false' id='pizzaForm'>
+	        Step 1. Fill out this form. Step 2. Press button to order Pizza whenever you want.<br />
+	        <span id='errorMsg'>{{errorMsg}}</span> <br />
+	        <div class='formQ' id='formEmail'>
+	             Email: <br />
+	            <input type='text' ng-model='userEmail'/>
+            </div>
+	        <div class='formQ' id='formName'>
+	             Name: <br />
+	            <input type='text' ng-model='userName'/>
+            </div>
+	        <div class='formQ' id='formAddress'>
+	             Address: <br />
+	            <input type='text' ng-model='userAddress'/>
+            </div>
+	        <div class='formQ' id='formZip' ng-class='formZipClasses'>
+	             Zip: <br />
+	            <input type='text' ng-model='userZip'/>
+            </div>
+	        <div class='formQ' id='formPhone'>
+	             Phone: <br />
+	            <input type='text' ng-model='userPhone'/>
+            </div>
+	        <a href='' ng-click='submitForm()'>Next!</a>
+	    </div>
+
+	    <!-- This section displays the pizza ordering button along with information that has been entered so far. -->
+	    <div ng-show='formFilledOut'>
+			<div id='pizzaButton' ng-click='orderPizza()' ng-class='pbClasses' ng-init='ordered = false; pbClasses=[]; timeTillETA = 59'>
+			    <div ng-show='!ordered'>
+			        <h1>Click to order pizza!</h1>
+			        <img id='pizzaImg' src='img/pizza.jpg'><br />
+			        <span ng-bind-html='orderDesc'></span>
+			     </div>
+			     <div ng-show='ordered'>
+			         <h1>0:{{doubleDigit(timeTillETA)}} until delivery time estimate.</h1>
+			     </div>
+			</div>
+			<div id='infoColumn'>
+			    <div class='infoBox'>
+			       Name:<br />
+			       {{userName}}<br />
+			        <span id='geoLoc'></span>
+			    </div>	    
+			    <div class='infoBox'>
+			       Address:<br />
+			       {{userAddress}}<br />
+			        <span id='geoLoc'></span>
+			    </div>
+			    <div class='infoBox'>
+			        Phone Number:<br />
+			        {{userPhone}}
+			    </div>
+			</div> 
+		</div>
+	</div>
+<script src='js/pizzaCtrl.js'></script>
+</body>
+</html>
